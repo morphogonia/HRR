@@ -1,0 +1,533 @@
+/********************************************************************************************************************************************************
+Name: Humberto Ríos Rodríguez
+Version: 1.0
+Author: Sandra Bermudez @ bulabe.com
+URL: http://humbertoriosrodriguez.com
+/*******************************************************************************************************************************************************/
+
+*, html, body, div, span, h1, h2, h3, h4, h5, h6, p, img, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, table, caption, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+/********************************************************************************************************************************************************
+FONTS
+/********************************************************************************************************************************************************/
+
+@font-face {
+	font-family: 'HelveticaNeueLTPro-Bd';
+	src: url('fonts/HelveticaNeueLTPro-Bd.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {    
+	font-family: 'HelveticaNeueLTPro-Th';
+	src: url('fonts/HelveticaNeueLTPro-Th.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/********************************************************************************************************************************************************
+COLOR GUIDE
+
+Dark #1E1E1E
+Clear #1a1a1a
+Gray #666666
+
+/********************************************************************************************************************************************************/
+
+/********************************************************************************************************************************************************
+BASICS: TAGS
+/********************************************************************************************************************************************************/
+
+body {
+	background-color: #131313;
+	color: #828282;
+	font-family: 'HelveticaNeueLTPro-Th', sans-serif;
+	font-weight: 400;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+h1, h2, h3, p, li {
+	font-weight: 400;
+}
+
+h3 {
+	color: #e1e1e1;
+	font-size: 14px;
+	margin: 6px 0;
+}
+
+p {
+	font-size: 12px;
+	line-height: 18px;
+	text-align: justify;
+	margin-bottom: 21px;
+}
+
+ul {
+	list-style-type: disc;
+	list-style-position: inside;
+}
+
+li {
+	
+}
+
+a:link, a:visited, a:active {
+	text-decoration: none;
+	color: #666;
+	font-size: 13px;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #fff;
+	-webkit-transition: color 0.2s linear 0s;
+	-moz-transition: color 0.2s linear 0s;
+	-o-transition: color 0.2s linear 0s;			
+	transition: color 0.2s linear 0s;
+}
+
+a:link img, a:visited img, a:active img, a:hover img { 
+	border: none;
+	background-color: transparent;
+}
+
+::selection,
+::-moz-selection {
+	background: #666;
+	color: #fff;
+}
+
+hr {
+	border: 1px solid #555;
+	margin: 22px 0;
+}
+
+em {
+	font-style: italic;
+	color: #fff;
+}
+
+strong {
+	font-family: 'HelveticaNeueLTPro-Bd';
+	font-weight: 400;
+}
+
+span.claro {
+	color: #828282;
+}
+
+/*********************************************************************************
+LAYOUT
+/********************************************************************************/
+
+div#wrapper {
+	width: 920px;
+	margin: 0 auto;
+	padding-bottom: 90px;
+	text-align: left;
+}
+
+.floatl {
+	float: left;
+}
+
+.floatr {
+	float: right;
+}
+
+.clearfix {
+	clear: both;
+}
+
+/*********************************************************************************
+HEADER
+/********************************************************************************/
+
+div#header {
+	height: 100px;
+	padding: 25px 0 5px 0;
+	margin: 0 0 15px 0;
+	position: relative;
+	border-bottom: 1px solid #555;
+}
+
+h1#titulo a:link, 
+h1#titulo a:visited, 
+h1#titulo a:active {
+	display: block;
+	width: 260px;
+	float: left;
+	font-size: 20px;
+	color: #666;	
+}
+
+h1#titulo a:hover {
+	color: #fff;
+}
+
+/*********************************************************************************
+NAV
+/********************************************************************************/
+
+ul#menuObra {
+	list-style-type: none;
+	width: 150px;
+	margin: 3px 0 0 0;
+	float: left;
+}
+
+ul#menuSeries {
+	list-style-type: none;
+	width: 450px;
+	margin: 3px 0 0 0;
+	float: left;
+}
+
+ul#menuBio {
+	list-style-type: none;
+	width: 140px;
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+}
+
+ul#menuObra li a:link, 
+ul#menuObra li a:visited, 
+ul#menuObra li a:active,
+ul#menuSeries li a:link, 
+ul#menuSeries li a:visited, 
+ul#menuSeries li a:active,
+ul#menuBio li a:link, 
+ul#menuBio li a:visited, 
+ul#menuBio li a:active {
+	text-transform: lowercase;
+}
+
+ul#menuSeries li a:link, 
+ul#menuSeries li a:visited, 
+ul#menuSeries li a:active {
+	text-transform: lowercase;
+}
+
+ul#menuBio li a:link, 
+ul#menuBio li a:visited, 
+ul#menuBio li a:active {
+	float: left;
+	margin-left: 20px;
+}
+
+ul#menuObra li a:hover,
+ul#menuBio li a:hover,
+ul#menuSeries li a:hover,
+h1#titulo a:hover {
+	
+}
+
+
+/*********************************************************************************
+OBRA
+/********************************************************************************/
+
+div#content {
+	min-height: 460px;
+	min-width: 920px;
+	position: relative;
+	overflow: hidden;
+}
+
+/*
+div#statement {
+	clear: both;
+	padding: 20px;
+	background-image: url('images/opacity.png');
+	position: relative;
+}
+*/
+div#statement {
+	width: 620px;
+	height: 100%;
+	padding: 0 20px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-image: url('images/opacity.png');
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+div#statement h3 {
+	margin: 30px 0 20px 0;
+	font-family: 'HelveticaNeueLTPro-Bd';
+	font-size: 22px;
+	font-weight: 400;	
+}
+
+.thb {
+	opacity: 0.4;
+}
+
+a#clos:link, a#clos:visited, a#clos:active {
+	display: block;
+	width: 30px;
+	height: 30px;
+	
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	text-align: center;
+	line-height: 35px;
+}
+
+div#epigrafe {
+	width: 470px;
+	padding-top: 60px;
+	min-height: 380px;
+	float: right;
+	text-align: right;
+	font-style: italic;
+}
+
+div#epigrafe p {
+	text-align: right;
+	margin: 0 0 12px 0;
+}
+
+div#footer {
+	clear: both;
+	width: 900px;
+	border-top: 1px solid #666;
+	padding: 15px 10px;
+	margin: 20px auto;
+}
+
+div#footer p {
+	margin: 0 0 0px 0;
+}
+
+div#caption {
+	margin: 0 0 8px 0;
+}
+
+a#prev:link,
+a#prev:visited,
+a#prev:active,
+a#next:link,
+a#next:visited,
+a#next:active {
+	float: left;
+	font-size: 16px;
+}
+
+a#state:link,
+a#state:visited,
+a#state:active {
+	float: right;
+}
+
+span#contador {
+	float: left;
+	margin: 0 5px;
+	font-size: 12px;
+	line-height: 21px;
+}
+
+/********************************************************************************************************************************************************
+A-PANEL
+/********************************************************************************************************************************************************/
+
+form#login {
+	clear: both;
+	margin: 10px 0 0 0;
+}
+
+form#login label {
+	font-family: 'HelveticaNeueLTPro-Th', sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+	letter-spacing: 1px;
+	display: block;
+	margin: 16px 0;
+}
+
+form#login input {
+	width: 290px;
+	background-color: #000;
+	color: #828282;
+	font-family: 'HelveticaNeueLTPro-Th', sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+	letter-spacing: 1px;
+	padding: 6px;
+}
+
+form#login textarea {
+	width: 820px;
+	height: 360px;
+	background-color: #000;
+	color: #828282;
+
+}
+
+form#login input#submit {
+	background-color: #000;
+	color: red;
+	width: 60px;
+	display: block;
+	margin: 16px 0;
+}
+
+form#login input#submit:hover {
+	background-color: red;
+	color: #fff;
+}
+
+/*********************************************************************************/
+
+div#headerPanel {
+	height: 50px;
+	padding: 25px 0 5px 0;
+	margin: 0 0 15px 0;
+	position: relative;
+	border-bottom: 1px solid #555;
+}
+
+ul#menuPanel {
+	list-style-type: none;
+	width: 350px;
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+}
+
+ul#menuPanel li {
+	float: left;
+	margin: 0 15px;
+}
+
+ul#seriePanel {
+	list-style-type: none;
+}
+
+ul#seriePanel li a:link, 
+ul#seriePanel li a:active,
+ul#seriePanel li a:visited {
+	display: block;
+	width: 220px;
+	height: 220px;
+	text-align: center;
+	line-height: 220px;
+	float: left;
+	margin: 10px 10px 0 0;
+	background-color: #000;
+}
+
+ul#seriePanel li a:hover {
+	color: #fff;
+}
+
+ul#seriePanel li a#new:link, 
+ul#seriePanel li a#new:active,
+ul#seriePanel li a#new:visited {
+	color: red;
+}
+
+a#cancel:link,
+a#cancel:visited,
+a#cancel:active {
+	float: right;
+	color: red;
+	border: 1px solid red;
+	padding: 9px 6px 6px 6px;
+	margin-right: 20px;
+}
+
+a#eliminar:link,
+a#eliminar:visited,
+a#eliminar:active {
+	color: red;
+	border: 1px solid red;
+	padding: 9px 6px 6px 6px;
+}
+
+ul#noticias {
+	list-style-type: none;
+}
+
+ul#noticias li {
+	display: block;
+	width: 175px;
+	height: 160px;
+	padding: 10px;
+	background-color: #000;
+	margin: 8px;
+	float: left;
+	overflow: hidden;
+}
+
+ul#noticias li .ov {
+	max-height: 120px;
+	overflow: hidden;
+}
+
+ul#noticias li a:link, 
+ul#noticias li a:visited,
+ul#noticias li a:active {
+	display: block;
+	width: 60px;
+	padding: 8px 6px 6px 6px;
+	color: red;
+	background-color: #000;
+	margin: 10px auto 0 auto;
+}
+
+ul#noticias li a:hover {
+	background-color: red;
+	color: #fff;
+}
+
+/*********************************************************************************
+CLASES
+/********************************************************************************/
+
+.w160 {
+	width: 220px;
+}
+
+.w180 {
+	width: 180px;
+}
+
+.w610 {
+	width: 610px;
+}
+
+.mt10 {
+	margin-top: 10px;
+}
+
+.mt20 {
+	margin-top: 20px;
+}
+
+.mr10 {
+	margin-right: 10px;
+}
+
+.mb10 {
+	margin-bottom: 10px;
+}
+
+.mb20 {
+	margin-bottom: 20px;
+}
+            
